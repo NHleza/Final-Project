@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Task 1: Load and Explore the Dataset
-# Load the Iris dataset (or any CSV dataset of your choice)
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 data = pd.read_csv(url)
 
@@ -20,12 +19,9 @@ print("\nMissing Values Check:")
 print(data.isnull().sum())
 
 # Clean the dataset (if missing values exist, handle them)
-# In this example, there are no missing values, but here’s how to handle them:
 data.dropna(inplace=True)  # Removes rows with missing values
-# Alternatively: data.fillna(value, inplace=True)  # Fill missing values with 'value'
 
 # Task 2: Basic Data Analysis
-# Compute basic statistics for numerical columns
 print("\nBasic Statistics:")
 print(data.describe())
 
